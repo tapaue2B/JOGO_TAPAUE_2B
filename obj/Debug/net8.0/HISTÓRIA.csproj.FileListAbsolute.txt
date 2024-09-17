@@ -17,3 +17,4 @@ C:\Users\j02\Documents\JOGO TAPAUE\INTRODUÇÃO\build\HISTÓRIA.deps.json
 C:\Users\j02\Documents\JOGO TAPAUE\INTRODUÇÃO\build\HISTÓRIA.runtimeconfig.json
 C:\Users\j02\Documents\JOGO TAPAUE\INTRODUÇÃO\build\HISTÓRIA.dll
 C:\Users\j02\Documents\JOGO TAPAUE\INTRODUÇÃO\build\HISTÓRIA.pdb
+C:\Users\j02\Documents\JOGO TAPAUE\INTRODUÇÃO\HISTÓRIA\obj\Debug\net8.0\HISTÓRIA.sourcelink.json

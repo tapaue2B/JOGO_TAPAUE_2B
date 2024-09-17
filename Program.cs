@@ -9,11 +9,19 @@ using Microsoft.VisualBasic.FileIO;
 
 class Program
 {
-    static string? nome, classe, item, local,l1,l2,l3;
+    static string? nome, classe, local, l1, l2, l3;
     static int atk, def, spe;
+
+    static string? itemb1, itemb2, itemb3, itemb4, itemb5;
+    static string? dica1, dica2, dica3, dica4, dica5;
+
+    static string? inimigo1 = "vivo",inimigo2 = "vivo";
+
+    static int atkI1, defI1, speI1;
 
     static void Main()
     {
+        continua();
         menu();
     }
 
@@ -183,15 +191,15 @@ class Program
         switch (edin)
         {
             case 1:
-                item = "Mixtão";
+                itemb1 = "Mixtão";
                 babarosa();
                 break;
             case 2:
-                item = "pitchulinha";
+                itemb1 = "pitchulinha";
                 babarosa();
                 break;
             case 3:
-                item = "Café";
+                itemb1 = "Café";
                 babarosa();
                 break;
             default:
@@ -203,9 +211,9 @@ class Program
     static void babarosa()
     {
         Console.Clear();
-        Console.WriteLine(nome + $": Valeu edin pelo {item}");
+        Console.WriteLine(nome + $": Valeu edin pelo {itemb1}");
         Console.ReadLine();
-        Console.WriteLine(nome + $" colocou o {item} na mochila ");
+        Console.WriteLine(nome + $" colocou o {itemb1} na mochila ");
         Console.ReadLine();
         Console.WriteLine("Edin: Ei pae vai pagar não?");
         Console.ReadLine();
@@ -261,31 +269,31 @@ class Program
         switch (resp)
         {
             case 1:
-                local = "Vaso de planta";
+                local = "do vaso de planta";
                 l1 = "terra do vaso";
                 l2 = "mesas ao redor";
                 l3 = "armarios";
                 hino();
                 break;
             case 2:
-                local = "Estacionamento das bike";
-                l1 = "";
-                l2 = "";
-                l3 = "";
+                local = "do estacionamento das bike";
+                l1 = "de trás das bicicletas";
+                l2 = "grama ao redor";
+                l3 = "Atras da arvore";
                 hino();
                 break;
             case 3:
-                local = "Boca do Igor(1°B)";
-                l1 = "";
-                l2 = "";
-                l3 = "";
+                local = "da boca do Igor(ESTATUA)";
+                l1 = "estatua";
+                l2 = "futmesa";
+                l3 = "escada";
                 hino();
                 break;
             case 4:
-                local = "Cesto de Lixo do banheiro";
-                l1 = "";
-                l2 = "";
-                l3 = "";
+                local = "do cesto de Lixo do banheiro";
+                l1 = "pia";
+                l2 = "mictorio";
+                l3 = "box pichado";
                 hino();
                 break;
             default:
@@ -302,7 +310,7 @@ class Program
         Console.WriteLine("Pátio");
         Console.ReadLine();
         Console.Clear();
-        Console.WriteLine("A bola foi guardada em " + local);
+        Console.WriteLine("A bola foi guardada perto" + local);
         Console.ReadLine();
         Console.Clear();
         Console.WriteLine("Paulo Tiragua: Agora vamos catar o hino tapauense");
@@ -320,7 +328,7 @@ class Program
         Console.Clear();
         Console.WriteLine(nome + ": Finalmente rapaziada,partiu futmesa krlh...");
         Console.ReadLine();
-        Console.WriteLine(nome + ": ué cade bola eu juro que tinha deixado aqui no " + local);
+        Console.WriteLine(nome + ": ué cade bola eu juro que tinha deixado aqui perto " + local);
         Console.ReadLine();
         perda();
     }
@@ -373,7 +381,7 @@ class Program
         Console.ReadLine();
         Console.WriteLine("Sávio: O que está acontecendo aqui, posso saber?");
         Console.ReadLine();
-        Console.WriteLine(nome + $": A gente perdeu nosso bola no {local}");
+        Console.WriteLine(nome + $": A gente perdeu nosso bola perto {local}");
         Console.ReadLine();
         Console.WriteLine(nome + ": Queriamos saber se você pode nos ajudar");
         Console.ReadLine();
@@ -389,6 +397,146 @@ class Program
         Console.WriteLine("Sávio seguirá com você na sua jornada!! ");
         Console.ReadLine();
         Console.Clear();
+        continua();
+    }
+
+    static void continua()
+    {
+        Console.Clear();
+        Console.WriteLine("Savio:nossa jornada vai começar pelas salas da masmorra do fundamental 2");
+        Console.ReadLine();
+        continuafund2();
+    }
+    static void continuafund2()
+    {
+        if(inimigo1 == "vivo")
+        {
+        int resp;
+        Console.Clear();
+        Console.WriteLine("Savio: qual sala você quer ir?");
+        Console.WriteLine("");
+        Console.WriteLine("1 -  6° ANO");
+        Console.WriteLine("2 -  7° ANO");
+        Console.WriteLine("3 -  8° ANO");
+        int.TryParse(Console.ReadLine(), out resp);
+        switch(resp)
+        {
+            case 1:
+                anof1();
+                atkI1 = 50;
+                defI1 = 250;
+                speI1 = 100;
+                break;
+            case 2:
+                anof1();
+                atkI1 = 100;
+                defI1 = 250;
+                speI1 = 50;
+                break;
+            case 3:
+                anof1();
+                atkI1 = 250;
+                defI1 = 100;
+                speI1 = 50;
+                break;
+            default:
+                continuafund2();
+                break;
+        }
+        }
+        else if(inimigo1 == "morto")
+        {
+                    int resp;
+        Console.Clear();
+        Console.WriteLine("qual sala você quer ir?");
+        Console.WriteLine("");
+        Console.ReadLine();
+        Console.WriteLine("1 -  6° ANO");
+        Console.WriteLine("2 -  7° ANO");
+        Console.WriteLine("3 -  8° ANO");
+        Console.WriteLine("4 -  9° ANO");
+        int.TryParse(Console.ReadLine(), out resp);
+        switch(resp)
+        {
+            case 1:
+                anof1();
+                break;
+            case 2:
+                anof1();
+                break;
+            case 3:
+                anof1();
+                break;
+            case 4:
+                ano9();
+                atkI1= 150;
+                defI1 = 200;
+                speI1 = 150;
+                break;
+            default:
+                continuafund2();
+                break;
+        }
+        }
+
+        else if(inimigo2 == "morto")
+        {
+                    int resp;
+        Console.Clear();
+        Console.WriteLine("Savio: E agora onde você quer ir?");
+        Console.WriteLine("");
+        Console.ReadLine();
+        Console.WriteLine("1 -  6° ANO");
+        Console.WriteLine("2 -  7° ANO");
+        Console.WriteLine("3 -  8° ANO");
+        Console.WriteLine("4 -  9° ANO");
+        Console.WriteLine("5 -  Ensino médio");
+        int.TryParse(Console.ReadLine(), out resp);
+        switch(resp)
+        {
+            case 1:
+                anof1();
+                break;
+            case 2:
+                anof1();
+                break;
+            case 3:
+                anof1();
+                break;
+            case 4:
+                ano9();
+                break;
+            case 5:
+                ensinoMedio();
+                break;
+            default:
+                continuafund2();
+                break;
+        }
+        }
+    }
+
+    static void anof1()
+    {
+        Console.Clear();
+        Console.WriteLine("Savio: Chegamos, vou perguntar se alguem viu algo");
+        Console.ReadLine();
+        Console.WriteLine("Savio: Ola gente alguem aqui ");
+        
+    }
+
+    static void ano9()
+    {
+        Console.Clear();
+        Console.WriteLine("ACABOU");
+        Console.ReadLine();
+    }
+
+    static void ensinoMedio()
+    {
+        Console.Clear();
+        Console.WriteLine("ACABOU");
+        Console.ReadLine();
     }
 
     static void procura1()
@@ -397,18 +545,18 @@ class Program
         Console.WriteLine(nome + ": Agora não nos resta escolha, VAMOS ATRÁS DE PISTAS!");
         Console.ReadLine();
         Console.Clear();
-        procuravaso();
+        procuralocal();
     }
 
-    static void procuravaso()
+    static void procuralocal()
     {
         int resp;
         Console.Clear();
         Console.WriteLine("Aonde você deseja procurar? ");
         Console.WriteLine("");
-        Console.WriteLine("1- Debaixo da terra do vaso de planta");
-        Console.WriteLine("2- Na mesas ao redor ");
-        Console.WriteLine("3- Em cima dos armários ao lado");
+        Console.WriteLine($"1- {l1}");
+        Console.WriteLine($"2- {l2}");
+        Console.WriteLine($"3- {l3}");
         Console.WriteLine("4- Voltar para o pátio");
         int.TryParse(Console.ReadLine(), out resp);
         Console.Clear();
@@ -416,47 +564,66 @@ class Program
         switch (resp)
         {
             case 1:
-                terra();
+                dicaFalsa1();
                 break;
             case 2:
-                mesa();
+                dicaFalsa2();
                 break;
             case 3:
-                armario();
+                DicaVerdadeira();
                 break;
             case 4:
                 perda();
                 break;
             default:
-                procuravaso();
+                procuralocal();
                 break;
         }
 
     }
 
-    static void terra()
+    static void dicaFalsa1()
     {
-        Console.WriteLine("TO AQUI");
+        Console.Clear();
+        Console.WriteLine($"Não foi encontrado nada em {l1}.");
         Console.ReadLine();
-        procuravaso();
+        procuralocal();
     }
 
-    static void mesa()
+    static void dicaFalsa2()
     {
-        Console.WriteLine("TO AQUI");
+        Console.WriteLine($"Não foi encontrado nada em {l2}");
         Console.ReadLine();
-        procuravaso();
+        procuralocal();
     }
 
-    static void armario()
+    static void DicaVerdadeira()
     {
-        Console.WriteLine("TO AQUI");
-        Console.ReadLine();
-        procuravaso();
+        if (dica1 == "dica 1")
+        {
+            Console.WriteLine($"Não foi encontrado nada em {l3}.");
+            Console.ReadLine();
+            procuralocal();
+        }
+        else
+        {
+            dica1 = "dica 1";
+            Console.WriteLine(nome + ": Olha!!!, oq é isso?");
+            Console.ReadLine();
+            Console.WriteLine(nome + ": Uma dica!!!");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Dica 1: Um fio de cabelo ruivo");
+            Console.ReadLine();
+            Console.WriteLine(nome + ": Interessante");
+            Console.ReadLine();
+            procuralocal();
+        }
+
     }
     static void falar()
     {
-                Console.Clear();
+        Console.Clear();
         Console.WriteLine("04/09/2024");
         Console.WriteLine("Quarta-feira");
         Console.WriteLine("Portão de entrada da escola tapaue");
@@ -464,10 +631,10 @@ class Program
         Console.Clear();
         Console.WriteLine(nome + ": Agora estamos decidido: VAMOS FALAR COM AS PESSOAS AO REDOR!");
         Console.ReadLine();
-        procura2();
+        fala1();
     }
 
-        static void procura2()
+    static void fala1()
     {
         int resp;
         Console.Clear();
@@ -480,7 +647,7 @@ class Program
         int.TryParse(Console.ReadLine(), out resp);
         Console.Clear();
 
-         switch (resp)
+        switch (resp)
         {
             case 1:
                 sergio();
@@ -495,7 +662,7 @@ class Program
                 perda();
                 break;
             default:
-                procura2();
+                fala1();
                 break;
         }
     }
@@ -503,38 +670,41 @@ class Program
     static void sergio()
     {
         Console.Clear();
-        Console.WriteLine(nome + $": Ei Sérgio, a gente perdeu a nossa bola no {local}, você viu alguma coisa");
+        Console.WriteLine(nome + $": Ei Sérgio, a gente perdeu a nossa bola perto {local}, você viu alguma coisa");
         Console.ReadLine();
-        Console.WriteLine( $"Sérgio: eu vi quando vocês colocaram a bola {local}, e vi dois vultos passando pelo {l3} mas não vi quem era ao certo");
+        Console.WriteLine($"Sérgio: eu vi quando vocês colocaram a bola {local}, e vi dois vultos passando pelo {l3} mas não vi quem era ao certo");
         Console.ReadLine();
         Console.WriteLine(nome + ":Obrigado pela informação Sérgio, valeu ");
         Console.ReadLine();
         Console.Clear();
-        procura2();
+        fala1();
     }
 
     static void mariana()
     {
         Console.Clear();
-        Console.WriteLine(nome + $": Ei Sérgio, a gente perdeu a nossa bola no {local}, você viu alguma coisa");
+        Console.WriteLine(nome + $": Mariana man a gente perdeu a nossa bola perto {local}, tu viu alguém com a bola?");
         Console.ReadLine();
-        Console.WriteLine( $"Sérgio: eu vi quando vocês colocaram a bola {local}, e vi dois vultos passando pelo {l3} mas não vi quem era ao certo");
+        Console.WriteLine($"Mariana: não vi nada mas, vi uns meninos falando sobre a bola pelo {l2} mas não sei quem são os eles ");
         Console.ReadLine();
-        Console.WriteLine(nome + ":Obrigado pela informação Sérgio, valeu ");
+        Console.WriteLine(nome + " valeu, vou ver se consigo saber mais quem são esses caras ");
         Console.ReadLine();
+        Console.WriteLine();
         Console.Clear();
+        fala1();
     }
 
     static void carlao()
     {
         Console.Clear();
-        Console.WriteLine(nome + $": Ei Sérgio, a gente perdeu a nossa bola no {local}, você viu alguma coisa");
+        Console.WriteLine(nome + $": Ei Carlão, a gente perdeu a nossa bola perto {local}, você viu se alguem pegou?");
         Console.ReadLine();
-        Console.WriteLine( $"Sérgio: eu vi quando vocês colocaram a bola {local}, e vi dois vultos passando pelo {l3} mas não vi quem era ao certo");
+        Console.WriteLine($"Carlão: eu estava no {local}, e vi umas pessoas no {l1} mas eles passaram correndo não consegui ver quem era");
         Console.ReadLine();
-        Console.WriteLine(nome + ":Obrigado pela informação Sérgio, valeu ");
+        Console.WriteLine(nome + ":Tá certo Carlota, valeu ");
         Console.ReadLine();
         Console.Clear();
+        fala1();
     }
 
 
